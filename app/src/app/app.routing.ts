@@ -10,10 +10,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoggedOutComponent } from './logged-out/logged-out.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'logged-out', component: LoggedOutComponent },
+  { path: 'profile/:id', component: UserProfileComponent },
     { path: '', pathMatch: 'full', redirectTo: '/home' },
     { path: '**', component: NotFoundComponent }
 ]

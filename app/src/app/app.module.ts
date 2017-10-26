@@ -19,6 +19,8 @@ import { LoggedOutComponent } from './logged-out/logged-out.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CommitHistoryService } from './commit-history.service';
+import { CgpBreadcrumbsService } from './shared/cgp-breadcrumbs/cgp-breadcrumbs.service';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
     imports: [
@@ -30,7 +32,7 @@ import { CommitHistoryService } from './commit-history.service';
         MdMenuModule,
         MdButtonModule,
         MdIconModule,
-        CgpModule,
+        CgpModule
     ],
     declarations: [
         AppComponent,
@@ -42,7 +44,8 @@ import { CommitHistoryService } from './commit-history.service';
     ],
     providers: [
         AppService,
-        CommitHistoryService
+        CommitHistoryService,
+        CgpBreadcrumbsService
     ],
     bootstrap: [ AppComponent ]
 })

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Button } from 'app/shared/pop-up-modal/button.model';
+import { Button } from '../button.model';
 
 @Component({
     // tslint:disable-next-line:component-selector

@@ -7,10 +7,12 @@
 import { Component } from '@angular/core';
 
 import { config } from '../../config/config';
+import { cgpAuthentication } from '../../modules/cgp-authentication';
 
 @Component({
     templateUrl: './home.template.html'
 })
 export class HomeComponent {
     appName = config.appInfo.name;
+    userId = cgpAuthentication.getUserInfo().uid;
 }
