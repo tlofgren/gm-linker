@@ -9,7 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { config } from '../config/config';
 import { AppService } from './app.service';
-import { CgpIdleService } from './shared/cgp-idle/cgp-idle.service';
+// import { CgpIdleService } from './shared/cgp-idle/cgp-idle.service';
 import { CgpBreadcrumbsService } from './shared/cgp-breadcrumbs/cgp-breadcrumbs.service';
 
 @Component({
@@ -25,10 +25,10 @@ export class AppComponent implements OnInit {
         private router: Router,
         private appService: AppService,
         private cgpBreadcrumbsService: CgpBreadcrumbsService,
-        private cgpIdleService: CgpIdleService
+        // private cgpIdleService: CgpIdleService
     ) {
         this.appService.appComponent = this;
-        this.cgpIdleService.startTimers();
+        // this.cgpIdleService.startTimers();
     }
 
     ngOnInit() {
@@ -57,16 +57,16 @@ export class AppComponent implements OnInit {
 
     @HostListener('window:mousemove')
     onMouseMove() {
-        this.cgpIdleService.setIsActive();
+        // this.cgpIdleService.setIsActive();
     }
 
     @HostListener('window:mousedown')
     onMouseDown() {
-        this.cgpIdleService.setIsActive();
+        // this.cgpIdleService.setIsActive();
     }
 
     @HostListener('window:keydown')
     onKeyDown() {
-        this.cgpIdleService.setIsActive();
+        // this.cgpIdleService.setIsActive();
     }
 }
