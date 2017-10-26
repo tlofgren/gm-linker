@@ -123,7 +123,7 @@ function getUserInfo() {
     // }
 
     // return null;
-    return JSON.parse("{\"displayName\":\"Developer, Diane\",\"uid\":\"NZJ32B\",\"gmuniqueidentifier\":\"645706133\",\"givenName\":\"\",\"sn\":\"Developer\",\"mail\":\"notarealemail@gm.com\",\"gmPersonType\":\"C\",\"nonGMPersonType\":\"\",\"initials\":\"\",\"entryStatus\":\"\",\"cn\":\"Diane Developer\",\"region\":\"North America\",\"title\":\"Software Developer\",\"gmLocationCity\":\"\",\"gmLocationState\":\"\",\"gmContractorCompany\":\"\",\"gmOrgDirect\":\"\"}");
+    return JSON.parse("{\"displayName\":\"Developer, Diane\",\"uid\":\"nzj32b\",\"gmuniqueidentifier\":\"645706133\",\"givenName\":\"\",\"sn\":\"Developer\",\"mail\":\"notarealemail@gm.com\",\"gmPersonType\":\"C\",\"nonGMPersonType\":\"\",\"initials\":\"\",\"entryStatus\":\"\",\"cn\":\"Diane Developer\",\"region\":\"North America\",\"title\":\"Software Developer\",\"gmLocationCity\":\"\",\"gmLocationState\":\"\",\"gmContractorCompany\":\"\",\"gmOrgDirect\":\"\"}");
 }
 
 export const cgpAuthentication = {

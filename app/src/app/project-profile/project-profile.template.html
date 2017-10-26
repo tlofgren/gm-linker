@@ -4,5 +4,11 @@
 <!--Desc: Template for the home page. -->
 <!--Other Contributors:-->
 
-<h1 class="page-title">Project {{ project.projectFriendlyName }}</h1>
+<h1 class="page-title">Project {{ project? project.projectFriendlyName : '' }}</h1>
+
+<table>
+    <tr>
+        <th></th>
+    </tr>
+</table>
 

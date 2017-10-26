@@ -12,7 +12,10 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class ProjectProfileComponent implements OnInit {
     user: string;
     commits: CommitHistory;
-    projectId: number;
+    projectId: number = 0;
+    get project() {
+        return this.commits.projects.find(p => p.ppmNum === this.projectId);
+    }
 
     constructor(private commitHistSvc: CommitHistoryService, private route: ActivatedRoute) {
     }
