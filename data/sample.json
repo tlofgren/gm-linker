@@ -1,0 +1,54 @@
+{
+  "gmId": "nzrv8b",
+  "projects": [
+    {
+      "asmsNum": 234234,
+      "projectFriendlyName": "PFCM",
+      "ppmNum": 634343,
+      "commitHistory": [
+        {
+          "latestCommitTimeStamp": 1509028498,
+          "filesCommitted": [
+            "polyfills.ts",
+            "main.ts",
+            "./app/app-routing.module.ts",
+            "./app/app.component.html",
+            "./app/app.component.css",
+            "tsconfig.app.json"
+          ],
+          "scm": "TFS"
+        }
+      ],
+      "users": [
+        "nzrv8b",
+        "nzj32b"
+      ]
+    },
+    {
+      "asmsNum": 234234,
+      "projectFriendlyName": "PFCM",
+      "ppmNum": 634343,
+      "commitHistory": [
+        {
+          "latestCommitTimeStamp": 1509029108,
+          "filesCommitted": [
+            "polyfills.ts",
+            "main.ts",
+            "./app/app-routing.module.ts",
+            "./app/app.component.html",
+            "./app/app.component.css",
+            "tsconfig.app.json"
+          ],
+          "scm": "SVN",
+          "asmsNum": 2765333,
+          "ppmNum": 3453444,
+          "projectId": "CSMS_5311"
+        }
+      ],
+      "users": [
+        "nzrv8b",
+        "nzj32b"
+      ]
+    }
+  ]
+}
