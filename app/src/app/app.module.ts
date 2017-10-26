@@ -16,6 +16,8 @@ import { AppService } from './app.service';
 import { HomeComponent } from './home/home.component';
 import { LoggedOutComponent } from './logged-out/logged-out.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CommitHistoryService } from './commit-history.service';
 
 @NgModule({
     imports: [
@@ -33,10 +35,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
         AppComponent,
         HomeComponent,
         LoggedOutComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        UserProfileComponent
     ],
     providers: [
-        AppService
+        AppService,
+        CommitHistoryService
     ],
     bootstrap: [ AppComponent ]
 })
