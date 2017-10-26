@@ -12,7 +12,7 @@ import { CgpBreadcrumbsService } from '../shared/cgp-breadcrumbs/cgp-breadcrumbs
 export class UserProfileComponent implements OnInit {
   currUserCommitHist: CommitHistory;
   get userProjects() {
-    return this.currUserCommitHist.projects;
+    return this.currUserCommitHist!.projects || [];
   }
 
   // need to change to input user

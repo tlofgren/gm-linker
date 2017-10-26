@@ -5,7 +5,7 @@ import { CommitHistory } from './commit-history.model';
 
 @Injectable()
 export class CommitHistoryService {
-  private apiUrl = 'http://devtest.demo.ca.com:8020/api/assets/currentusersprojects/';
+  private apiUrl = 'http://devtest.demo.ca.com:8020/api/assets/currentusersprojects';
 
   private SAMPLE_JSON = {
     "gmId": "nzrv8b",

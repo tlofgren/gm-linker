@@ -6,9 +6,13 @@
 
 <h1 class="page-title">Project {{ project? project.projectFriendlyName : '' }}</h1>
 
-<table>
-    <tr>
-        <th></th>
-    </tr>
-</table>
+<p>
+    ASMS: {{project.asmsNum}}</p>
+<p>PPM: {{project.ppmNum}}</p>
+<p>Commits: {{project.commitHistory[0].filesCommitted[0]}}</p>
+<div>Users:
+    <ul>
+        <li *ngFor="let u of project.users">{{u}}</li>
+    </ul>
+</div>
 

@@ -1,4 +1,4 @@
-<div class="card">
+<div *ngIf="userProjects" class="card">
   <div class="card-body">
     <div class="card-title">
       <h4>Projects I've worked on</h4>
@@ -6,7 +6,7 @@
     <div class="card-text">
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let p of userProjects">
-          <a routerLink="/project/{{p.ppmNum}}">{{p.projectFriendlyName}}</a> <!--/project/{{p.ppmNum}}-->
+          <a routerLink="/project/{{p.ppmNum}}">{{p? p.projectFriendlyName : ''}}</a> <!--/project/{{p.ppmNum}}-->
         </li>
       </ul>
     </div>
