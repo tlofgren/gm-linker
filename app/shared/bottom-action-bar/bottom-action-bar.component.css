@@ -1,0 +1,8 @@
+.bottom-bar {
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    padding: 5px;
+    border-top:1px solid #E6E6E6;
+}

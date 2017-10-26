@@ -1,0 +1,72 @@
+<div class="row" (click)="openDatePicker()">
+	<div class="col-xs-12 date-label" [ngClass]="{'date-label-up': selectedDate || datePickerOpen}">
+		{{label}}
+	</div>
+	<div class="col-xs-12">
+		<span class="selected-date" [ngClass]="{'date-picker-open': datePickerOpen}">
+			{{selectedDate | date:'shortDate'}}
+			<span class="fa fa-remove pull-right" (click)="clearDate($event)" *ngIf="selectedDate"></span>
+		</span>
+	</div>
+</div>
+<div class="row" *ngIf="datePickerOpen" class="overlay">
+	<div class="col-xs-12">
+		<div class="dropdown-arrow"></div>
+		<div class="date-picker">
+				<div class="row">
+					<div class="col-xs-9 today-column">
+						<button class="btn today-button" (click)="selectToday()" [disabled]="disableToday()">Today</button>
+					</div>
+					<div class="col-xs-3">
+						<i (click)="closeDatePicker()" class="fa fa-remove pull-right"></i>
+					</div>
+				</div>
+			<div class="row">
+				<div class="col-1-7 change-month" (click)="switchToPreviousMonth();">
+					<i class="fa fa-angle-left" aria-hidden="true"></i>
+					<span class="sr-only">Previous month</span>
+				</div>
+				<div class="col-5-7">{{months[displayedMonth]}} {{displayedYear}}</div>
+				<div class="col-1-7 change-month" (click)="switchToNextMonth()">
+					<i class="fa fa-angle-right" aria-hidden="true"></i>
+					<span class="sr-only">Next month</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="col-1-7">
+						Su
+					</div>
+					<div class="col-1-7">
+						Mo
+					</div>
+					<div class="col-1-7">
+						Tu
+					</div>
+					<div class="col-1-7">
+						We
+					</div>
+					<div class="col-1-7">
+						Th
+					</div>
+					<div class="col-1-7">
+						Fr
+					</div>
+					<div class="col-1-7">
+						Sa
+					</div>
+
+				</div>
+			</div>
+			<div class="row days-row">
+				<div class="col-xs-12">
+					<div *ngFor="let day of displayedDays" class="col-1-7 date">
+						<span [ngClass]="dateClasses(day)" (click)="selectDate(day)">
+							{{day.label}}
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

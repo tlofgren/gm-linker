@@ -1,0 +1,21 @@
+<div class="container showcase">
+	<div class="row showcase-header">
+		<div class="col-xs-3 col-sm-4">
+			<button class="pull-left action-button left-action back-button" *ngIf="showBackButton" routerLink='/dashboard'>
+				<span class="visible-xs">Back</span>
+				<i class="fa fa-angle-left hidden-xs" aria-hidden="true"></i>
+			</button>
+		</div>
+		<div class="col-xs-6 col-sm-4 showcase-title">
+			{{ title }}
+		</div>
+		<div class="col-xs-3 col-sm-4 showcase-right">
+			<ng-content select=".showcase-header-right"></ng-content>
+		</div>
+	</div>
+	<div class="row showcase-body">
+		<div class="col-xs-12 body-col">
+			<ng-content select=".showcase-body"></ng-content>
+		</div>
+	</div>
+</div>

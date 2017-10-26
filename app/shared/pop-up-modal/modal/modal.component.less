@@ -1,0 +1,67 @@
+﻿@gm-modal-gray: #F2F2F2;
+@gm-black: #4A4A4A;
+@gm-blue: #1960AA;
+
+.glyphicon-remove{
+    color: @gm-blue;
+    cursor: pointer;
+}
+
+.hostile-takeover-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hostile-takeover-overlay.modal-backdrop.in {
+    filter: alpha(opacity=100) !important;
+    opacity: 1 !important;
+}
+
+.modal-body {
+    font-size: 0.889em;
+}
+
+.modal-body-section{
+    font-size: 1.111em;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: @gm-modal-gray;
+}
+
+.modal-dialog{
+    margin: 0px auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-footer {
+    border-top: 0 !important;
+    button{
+        .fa{
+            margin-right: 5px;
+        }
+    }
+}
+
+.modal-header {
+    border-bottom: 1px solid @gm-black;
+    font-size: 1.111em;
+    padding: 5px;
+    text-align: center;
+}
+
+.modal-times {
+    color: @gm-black;
+    cursor: pointer;
+    margin-right: .5em;
+    margin-top: .1em;
+}
+
+.modal-to-front {
+    position: absolute !important;
+    z-index: 1100 !important;
+}

@@ -1,0 +1,172 @@
+// @import "../less/colors.less";
+@gm-blue: #1960AA;
+@white: #FFFFFF;
+@gm-blue-gray: #C2D8EA;
+.date-picker{
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    }
+
+    background-color: @gm-blue;
+    color: @white;
+
+    text-align: center;
+    font-size: .889em;
+
+    border-radius: 5px;
+
+    //horizontal dimensions
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 250px;
+
+    //vertical dimensions
+    @vertical-spacing: 10px;
+    padding-bottom: 6px;
+    padding-top: @vertical-spacing;
+    margin-top: @vertical-spacing;
+    .row:not(:first-child):not(:last-child){
+        margin-top: @vertical-spacing;
+    }
+
+    .days-row{
+        margin-top: 6px;
+    }
+
+    .date{
+        height: 30px;
+        margin-bottom: 4px;
+
+        span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            padding-top: 4px;
+            padding-right: 1px;
+            cursor: pointer;
+
+            &.selected{
+                background-color: @white;
+                color: @gm-blue;
+                border-radius: 15px;
+            }
+
+            &.today:not(.selected){
+                font-weight: bold;
+            }
+
+            &:hover:not(.selected):not(.disabled){
+                border: 1px solid white;
+                border-radius: 15px;
+                margin: -1px;
+            }
+
+            &.different-month{
+                color: @gm-blue-gray;
+                &:hover{
+                    border-color: @gm-blue-gray;
+                }
+
+                &:active:not(.disabled){
+                    background-color: @gm-blue-gray;
+                }
+            }
+
+            &:active:not(.disabled){
+                .selected;
+            }
+
+            &.disabled{
+                opacity: 0.2;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    //seven column system
+    @one-column: 14.28%;
+    .column{
+        position: relative;
+        float: left;
+        .noselect;
+    }
+    .col-1-7{
+        .column;
+        width: @one-column;
+    }
+    .col-5-7{
+        .column;
+        width: 5 * @one-column;
+    }
+
+    .change-month{
+        cursor: pointer;
+    }
+
+    .today-column{
+        text-align: left;
+
+        .today-button{
+            background-color: transparent;
+            border: 2px solid @white;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            color: @white;
+            &:hover{
+                color: @white;
+            }
+        }
+    }
+}
+
+.dropdown-arrow{
+    position: absolute;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid @gm-blue;
+}
+
+.selected-date{
+    border-bottom: 2px solid #e6e6e6;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.125em;
+}
+
+.date-label{
+    position: relative;
+    font-size: .875em;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.date-label-up{
+    font-size: 0.75em;
+    opacity: 0.75;
+    top: 0;
+    line-height: 0.75em;
+}
+
+.overlay{
+    position: absolute;
+    z-index: 2;
+    margin-bottom: 15px;
+}
+
+.fa-remove{
+    cursor: pointer;
+}
+
+.date-picker-open{
+    height: 30px;
+}

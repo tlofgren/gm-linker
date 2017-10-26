@@ -109,14 +109,14 @@ export class CgpIdleService {
         self.timeLeft = self.idleTimerConfig.warningTime * 60;
         self.clearCountdown();
         self.showIdleDialog();
-        self.countdown = setInterval(function() {
-            self.timeLeft--;
+        // self.countdown = setInterval(function() {
+        //     self.timeLeft--;
 
-            if (self.timeLeft < 1) {
-                self.clearCountdown();
-                window.location.replace('#/logged-out');
-            }
-        }, 1000);
+        //     if (self.timeLeft < 1) {
+        //         self.clearCountdown();
+        //         window.location.replace('#/logged-out');
+        //     }
+        // }, 1000);
     }
 
     clearCountdown() {

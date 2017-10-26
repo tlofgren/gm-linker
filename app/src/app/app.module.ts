@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { HomeComponent } from './home/home.component';
+import { ProjectProfileComponent } from "./project-profile/project-profile.component";
 import { LoggedOutComponent } from './logged-out/logged-out.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -36,7 +37,8 @@ import { CommitHistoryService } from './commit-history.service';
         HomeComponent,
         LoggedOutComponent,
         NotFoundComponent,
-        UserProfileComponent
+        UserProfileComponent,
+        ProjectProfileComponent
     ],
     providers: [
         AppService,
