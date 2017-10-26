@@ -1,0 +1,32 @@
+<div class="modal-to-front" *ngIf="visible">
+    <div class="hostile-takeover-overlay modal-backdrop in">
+        <div class="modal-dialog {{class}}">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div id="title" class="col-xs-8 col-xs-offset-2">{{ title }}</div>
+                        <div class="col-xs-2">
+                            <span class="glyphicon glyphicon-remove pull-right" (click)="hideModal();"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row modal-body-section">{{ message }}</div>
+                    <div class="row modal-body-section">
+                        <ng-content></ng-content>
+                    </div>
+                </div>
+                <div class="modal-footer" *ngIf="buttons">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button *ngFor="let button of buttons" type="button" class="{{button.className}}"
+                                [disabled]="button.isDisabled()" (click)="button.clickMethod()">
+                                <i class="fa {{button.icon}}" *ngIf="button.icon"></i>{{ button.text }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

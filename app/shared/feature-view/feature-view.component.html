@@ -1,0 +1,21 @@
+﻿<!-- Main View -->
+<div class="container-fluid showcase-padding" ng-click="closeNav()">
+    <div class="col-xs-12 showcase ng-scope">
+        <!-- Showcase Header Row -->
+        <div class="row showcase-header-row">
+            <!-- Showcase Title -->
+            <div class="col-xs-6 col-xs-offset-3 showcase-header-cell">
+                <div class="title-container">
+                    <h3 class="ng-binding">{{ pageTitle }}</h3>
+                </div>
+            </div>
+        </div>
+        <ng-content select="[showcase-header-tabbar]"></ng-content>
+        <div class="row campaign-row">
+            <div pfcmStretchedScrollableContainer [addFooterSpace]="addFooterSpace" id="scrollable-container" class="scrollable-container" ng-class="{'no-gradient-footer':forcedDisabledFooter}">
+                <ng-content></ng-content>
+            </div>
+            <div class="gradient-bottom" ng-show="isGradientShowing" style="opacity: {{opacity}};"></div>
+        </div>
+    </div>
+</div>
