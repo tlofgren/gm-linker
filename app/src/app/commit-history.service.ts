@@ -5,7 +5,7 @@ import { CommitHistory } from './commit-history.model';
 
 @Injectable()
 export class CommitHistoryService {
-  private apiUrl = '';
+  private apiUrl = 'http://devtest.demo.ca.com:8020/api/assets/currentusersprojects/';
 
   private SAMPLE_JSON = {
     "gmId": "nzrv8b",
@@ -62,6 +62,8 @@ export class CommitHistoryService {
     ]
   };
 
+  public currUser;
+
   /**
    * Taken from
    * https://angular.io/docs/ts/latest/guide/server-communication.html#!#fetch-data
@@ -89,11 +91,12 @@ export class CommitHistoryService {
   constructor(private http: Http) { }
 
   getCommitHistory(userId: string): Observable<CommitHistory> {
+    this.currUser = userId;
     // for sample data
     return Observable.of(this.SAMPLE_JSON);
 
     // for live service
-    // return this.http.get(this.apiUrl)
+    // return this.http.get(this.apiUrl + '/' + userId)
     //   .map(res => <CommitHistory>res.json())
     //   .catch(CommitHistoryService.handleError);
   }

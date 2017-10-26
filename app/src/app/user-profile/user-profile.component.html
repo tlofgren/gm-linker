@@ -6,7 +6,7 @@
     <div class="card-text">
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let p of userProjects">
-          <a routerLink="/">{{p.projectFriendlyName}}</a> <!--/project/{{p.ppmNum}}-->
+          <a routerLink="/project/{{p.ppmNum}}">{{p.projectFriendlyName}}</a> <!--/project/{{p.ppmNum}}-->
         </li>
       </ul>
     </div>
