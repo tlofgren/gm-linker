@@ -20,7 +20,7 @@ import { CgpBreadcrumbsService } from './shared/cgp-breadcrumbs/cgp-breadcrumbs.
 export class AppComponent implements OnInit {
     @ViewChild('cgpContentContainer') private cgpContentContainer: ElementRef;
     public sidenavVisible = false;
-
+    //public appName = 'GM Linker';
     constructor(
         private router: Router,
         private appService: AppService,
