@@ -21,6 +21,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CommitHistoryService } from './commit-history.service';
 import { CgpBreadcrumbsService } from './shared/cgp-breadcrumbs/cgp-breadcrumbs.service';
 import { SharedModule } from '../../shared/shared.module';
+import { ChartJSComponent } from './chartjs/chartjs.component';
+import { ChartJSModule } from './chartjs/chartjs.module';
+import { ChartsModule } from "ng2-charts";
 
 @NgModule({
     imports: [
@@ -32,7 +35,8 @@ import { SharedModule } from '../../shared/shared.module';
         MdMenuModule,
         MdButtonModule,
         MdIconModule,
-        CgpModule
+        CgpModule,
+      ChartsModule
     ],
     declarations: [
         AppComponent,
@@ -40,7 +44,8 @@ import { SharedModule } from '../../shared/shared.module';
         LoggedOutComponent,
         NotFoundComponent,
         UserProfileComponent,
-        ProjectProfileComponent
+        ProjectProfileComponent,
+      ChartJSComponent
     ],
     providers: [
         AppService,

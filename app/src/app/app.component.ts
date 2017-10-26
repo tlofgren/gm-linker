@@ -24,7 +24,6 @@ export class AppComponent implements OnInit {
     constructor(
         private router: Router,
         private appService: AppService,
-        private cgpBreadcrumbsService: CgpBreadcrumbsService,
         // private cgpIdleService: CgpIdleService
     ) {
         this.appService.appComponent = this;
@@ -42,13 +41,6 @@ export class AppComponent implements OnInit {
                 let baseUrl = urlArray[1];
                 let breadcrumbs = config.breadcrumbs[baseUrl];
                 let sidenavContentContainer = self.cgpContentContainer.nativeElement.querySelector('.mat-sidenav-content');
-
-                if (breadcrumbs) {
-                    self.cgpBreadcrumbsService.updateBreadcrumbs(breadcrumbs);;
-                }
-                else {
-                    self.cgpBreadcrumbsService.updateBreadcrumbs(config.breadcrumbs["404"]);
-                }
 
                 sidenavContentContainer.scrollTop = 0;
                 sidenavContentContainer.scrollLeft = 0;
