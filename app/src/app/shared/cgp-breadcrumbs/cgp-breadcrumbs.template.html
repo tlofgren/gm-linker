@@ -1,0 +1,25 @@
+<!--File: cgp-breadcrumbs.template.html-->
+<!--Author: Joseph M Diaz-->
+<!--Date: 5/1/2017-->
+<!--Desc: CGP Breadcrumbs module.-->
+<!--Other Contributors:-->
+
+<div id="breadcrumbs" class="cgp-bread-crumbs-container">
+    <ul class="cgp-bread-crumbs-list" *ngIf="showBreadcrumbs && breadcrumbs.length > 0">
+        <li class="cgp-bread-crumb" *ngFor="let breadcrumb of breadcrumbs; let i = index; let c = count; let last = last">
+            <a href="{{ breadcrumb.link.url }}" [ngClass]="{last:last}" *ngIf="c !== 1 && breadcrumb.link.enabled && breadcrumb.link.url; else noLink">
+                <span class="icon {{ breadcrumb.iconClass}}"></span>
+                <span class="text">{{ breadcrumb.name }}</span>
+            </a>
+
+            <ng-template #noLink>
+                <div [ngClass]="{last:last}">
+                    <span class="icon {{ breadcrumb.iconClass}}"></span>
+                    <span class="text">{{ breadcrumb.name }}</span>
+                </div>
+            </ng-template>
+
+            <i class="divider fa fa-chevron-right" *ngIf="!last"></i>
+        </li>
+    </ul>
+</div>

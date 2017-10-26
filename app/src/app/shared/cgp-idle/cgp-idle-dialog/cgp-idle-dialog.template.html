@@ -1,0 +1,17 @@
+<!--File: cgp-idle.template.html-->
+<!--Author: Joseph M Diaz-->
+<!--Date: 6/8/2017-->
+<!--Desc: CGP logout warning dialog.-->
+<!--Other Contributors:-->
+
+<h1 md-dialog-title>Your Session is About to Expire!</h1>
+
+<md-dialog-content>
+    <div class="alert alert-danger">You have <strong>{{ serviceRef.timeLeft }}</strong> seconds before your session expires.</div>
+</md-dialog-content>
+
+<md-dialog-actions class="cgp-dialog-action">
+    <span class="cgp-flex-fill"></span>
+    <button md-raised-button md-dialog-close (click)="logout()">Logout</button>
+    <button md-raised-button md-dialog-close color="primary" (click)="serviceRef.stayLoggedIn()">Stay Logged In</button>
+</md-dialog-actions>

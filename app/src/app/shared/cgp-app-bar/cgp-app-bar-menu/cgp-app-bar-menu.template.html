@@ -1,0 +1,15 @@
+<md-card class="cgp-appbar-card">
+    <span id="appbar-name" class="cgp-appbar-name">{{username}}</span>
+    <button id="appbar-button" class="cgp-appbar-button" [mdMenuTriggerFor]="appBarMenu" [disableRipple]='true' md-icon-button >
+        <md-icon class="cgp-appbar-icon">
+            <i class="{{menuIcon}}"></i>
+        </md-icon>
+    </button>
+    <md-menu #appBarMenu="mdMenu" [overlapTrigger]="false" yPosition="below">
+        <div *ngFor="let menuItem of menuItems">
+            <button md-menu-item (click)="menuActions(menuItem.action)">
+                <i class="{{menuItem.icon}}"></i>&nbsp;<span>{{menuItem.name}}</span>
+            </button>
+        </div>
+    </md-menu>
+</md-card>

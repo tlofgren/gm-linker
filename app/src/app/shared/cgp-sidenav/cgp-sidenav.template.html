@@ -1,0 +1,9 @@
+<!--File: cgp-sidenav.template.html-->
+<!--Author: Joseph M Diaz-->
+<!--Date: 5/10/2017-->
+<!--Desc: Sidenav component.-->
+<!--Other Contributors:-->
+
+<div class="cgp-sidenav">
+    <kendo-panelbar [items]="items" (stateChange)="cgpSidenavService.onPanelChange($event)"></kendo-panelbar>
+</div>

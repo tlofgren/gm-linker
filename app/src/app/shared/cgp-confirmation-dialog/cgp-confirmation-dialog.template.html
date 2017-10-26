@@ -1,0 +1,17 @@
+<!--File: cgp-confirmation-dialog.template.html-->
+<!--Author: Joseph M Diaz-->
+<!--Date: 4/28/2017-->
+<!--Desc: CGP Confirmation Dialog.-->
+<!--Other Contributors:-->
+
+<h1 md-dialog-title>{{ title }}</h1>
+
+<md-dialog-content>
+    <div class="{{alert ? 'alert alert-' + alert : ''}}">{{ message }}</div>
+</md-dialog-content>
+
+<md-dialog-actions class="cgp-dialog-actions">
+    <span class="cgp-flex-fill"></span>
+    <button md-raised-button (click)="handleNoClick()">{{noLabel}}</button>
+    <button md-raised-button color="primary" (click)="handleYesClick()">{{yesLabel}}</button>
+</md-dialog-actions>

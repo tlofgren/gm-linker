@@ -1,0 +1,57 @@
+# Output
+ng_dist/
+target/
+
+# Dependencies
+node_modules/
+
+# Maven wrapper
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+npm-debug.log
+log/
+
+
+# Code scans
+.scannerwork/
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Swap files
+*~
+*.swp
+*.swo
+*.fpr
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+### Visual Studio Code ###
+**/.vscode/
+
+
+

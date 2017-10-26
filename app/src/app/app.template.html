@@ -1,0 +1,22 @@
+<!--File: app.component.html-->
+<!--Author: Joseph M Diaz-->
+<!--Date: 4/20/2017-->
+<!--Desc: Root template for the app. -->
+<!--Other Contributors:-->
+
+<cgp-app-bar></cgp-app-bar>
+
+<cgp-breadcrumbs></cgp-breadcrumbs>
+
+<div #cgpContentContainer class="cgp-content-container">
+    <md-sidenav-container class="cgp-sidenav-container">
+        <md-sidenav mode="side" opened="{{sidenavVisible}}">
+            <cgp-sidenav></cgp-sidenav>
+        </md-sidenav>
+        <div class="cgp-content">
+            <router-outlet></router-outlet>
+        </div>
+    </md-sidenav-container>
+</div>
+
+<cgp-footer></cgp-footer>

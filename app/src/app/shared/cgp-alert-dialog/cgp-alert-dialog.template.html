@@ -1,0 +1,16 @@
+<!--File: cgp-alert-dialog.template.html-->
+<!--Author: Joseph M Diaz-->
+<!--Date: 4/27/2017-->
+<!--Desc: CGP Alert Dialog to use instead of js alert.-->
+<!--Other Contributors:-->
+
+<h1 md-dialog-title>{{ title }}</h1>
+
+<md-dialog-content>
+    <div class="{{alert ? 'alert alert-' + alert : ''}}">{{ message }}</div>
+</md-dialog-content>
+
+<md-dialog-actions class="cgp-dialog-actions">
+    <span class="cgp-flex-fill"></span>
+    <button color="primary" md-raised-button md-dialog-close>{{closeLabel}}</button>
+</md-dialog-actions>

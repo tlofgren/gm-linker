@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="226ad28e6272e8b6a14c8249a7c974b5bf7663fc" datatype="html">
+        <source>i18n</source>
+        <target>[!!! ï18ñ  !!!]</target>
+      </trans-unit>
+      <trans-unit id="fa01a81311d601fb140763436cc5699f0c65413c" datatype="html">
+        <source>You have been logged out due to inactivity.</source>
+        <target>[!!! Ýôú λáƲè βèèñ ℓôϱϱèδ ôúƭ δúè ƭô ïñáçƭïƲïƭ¥. ℓôřè₥ ïƥƨú₥  !!!]</target>
+      </trans-unit>
+      <trans-unit id="ad03e25529726f6f1726a8edb8a5188007b75890" datatype="html">
+        <source>Please click <x id="START_LINK" ctype="x-a"/>here<x id="CLOSE_LINK" ctype="x-a"/> to log back in.</source>
+        <target>[!!! Þℓèáƨè çℓïçƙ ℓôř <x id="START_LINK" ctype="x-a"/>λèřè<x id="CLOSE_LINK" ctype="x-a"/> ƭô ℓôϱ βáçƙ ïñ. ℓôřè !!!]</target>
+        <note priority="1" from="description">Instructions on how to log back in with a hyperlink.</note>
+      </trans-unit>
+      <trans-unit id="76012b1ed7b82760206ca26f4fb2b9d3b0f96637" datatype="html">
+        <source>404... Page not found!</source>
+        <target>[!!! 404... Þáϱè ñôƭ ƒôúñδ! ℓôřè₥  !!!]</target>
+        <note priority="1" from="description">HTTP 404 error text.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,120 @@
+/*
+File: cgpKendo.scss
+Author: Joseph M Diaz
+Date: 5/10/2017
+Desc: Style overrides for Kendo UI
+Other Contributors:
+*/
+
+@import "./cgpColorPalette";
+
+/***  CGP Sidenav ***/
+/***              ***/
+
+.cgp-sidenav-container .k-panelbar.k-header {
+    border-color: #e6e6e6;
+}
+
+.cgp-sidenav-container .k-panelbar {
+    background-color: #fafafa;
+    font-size: 16px;
+
+    /*** TODO: remove once the following defect is fixed by telerik - https://github.com/telerik/kendo-angular/issues/542 ***/
+    .k-icon.fa {
+        font-family: fontawesome;
+        font-size: 1.1em;
+    }
+
+    .k-content {
+        border-color: #e6e6e6;
+    }
+
+    .k-item {
+        background-color: #fafafa;
+        border-color: #e6e6e6;
+        line-height: 40px;
+
+        .k-link {
+            padding: 8px 15px;
+            color: #444444;
+            border-color: #e6e6e6;
+            box-shadow: none !important;
+
+            .k-header {
+                padding: 0px 16px !important;
+                line-height: 56px;
+                box-shadow: none !important;
+            }
+            .k-icon {
+                color: #444444;
+                margin-right: 5px;
+            }
+        }
+
+        .k-link:hover {
+            color: #444444;
+            cursor: pointer;
+
+            .k-icon {
+                color: #444444;
+            }
+        }
+
+        .k-link.k-state-selected {
+            color: $gm-blue-primary !important;
+            background-color: #fafafa !important;
+
+            .k-icon {
+                color: $gm-blue-primary !important;
+            }
+        }
+
+        .k-link.k-header.k-state-selected {
+            background-color: #ebebeb !important;
+        }
+
+        .k-link.k-state-selected:hover {
+            color: #444444 !important;
+
+            .k-icon {
+                color: #444444 !important;
+            }
+        }
+    }
+
+    .k-item.k-state-expanded {
+        .k-link.k-header {
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-color: #e6e6e6;
+        }
+
+        .k-link {
+            background-color: #fafafa !important;
+        }
+        .k-link.k-state-selected, .k-link:hover {
+            background-color: #ebebeb !important;
+        }
+    }
+
+    > .k-item:last-of-type {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-color: #e6e6e6;
+    }
+
+    div.k-panel.k-group {
+        .k-item {
+            .k-link {
+                font-size: .95em;
+
+                .k-icon {
+                    font-size: .95em;
+                }
+            }
+        }
+    }
+}
+
+/***                 ***/
+/*** End CGP Sidenav ***/

@@ -1,0 +1,14 @@
+<!--File: cgp-app-bar.template.js-->
+<!--Author: Joseph M Diaz-->
+<!--Date: 4/27/2017-->
+<!--Desc: CGP App Bar that has the company logo, navigation toggle, and user menu toggle.-->
+<!--Other Contributors:-->
+
+<md-toolbar color="primary" class="cgp-appbar">
+    <button md-icon-button class="menu" *ngIf="showNavToggle" (click)="onNavToggleClick()">
+        <md-icon class="cgp-icon-lg">menu</md-icon>
+    </button>
+    <img src="../../../assets/img/GM-Flat.svg" class="gm-logo">
+    <span class="title">{{ appName }}</span>
+    <cgp-app-bar-menu class="cgp-appbar-card-position" *ngIf="showUserBadge"></cgp-app-bar-menu>
+</md-toolbar>

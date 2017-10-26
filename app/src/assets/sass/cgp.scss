@@ -1,0 +1,243 @@
+/*
+File: cgp.scss
+Author: James Seebach
+Date: 4/25/2017
+Desc: Base styles for cgp applications.
+Other Contributors: Joseph M Diaz
+*/
+
+@import "./cgpColorPalette";
+@import "./cgpVariables";
+
+body {
+    color: $palette-grey-900;
+    font-family: $font_0, $font_1;
+    margin: 0;
+}
+
+h1.page-title {
+    margin-top: 0px;
+}
+
+.cgp-appbar {
+    background-color: $gm-blue-primary !important;
+    color: white !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-index-higher;
+    .mat-toolbar-row {
+        height: 80px;
+    }
+    .title {
+        font-size: 32px;
+        margin-left: 10px;
+        margin-right: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .gm-logo {
+        height: 85px;
+        width: 85px;
+        margin-top: 70px;
+        margin-left: 10px;
+        border: 5px solid $color-white;
+    }
+
+    .cgp-appbar-card-position {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 35px;
+
+        .cgp-appbar-card {
+            color: white;
+            background-color: $gm-blue-primary;
+            box-shadow: none !important;
+
+            .cgp-appbar-name {
+                position: absolute;
+                right: 35px;
+                top: 25px;
+                font-size: 15px;
+            }
+            .cgp-appbar-button {
+                position: absolute;
+                top: 15px;
+                height: 40px;
+            }
+            .cgp-appbar-icon {
+                font-size: 28px;
+                color: white;
+            }
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .cgp-appbar {
+        .mat-toolbar-row {
+            height: 80px;
+        }
+        .title {
+            display: none;
+        }
+    }
+}
+
+.cgp-bread-crumbs-container {
+    position: fixed;
+    background-color: $color-white;
+    color: $gm-grey-light;
+    top: 80px;
+    height: 48px;
+    width: 100%;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+    z-index: $z-index-high;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.cgp-bread-crumbs-list {
+    overflow: hidden;
+    padding: 5px 0;
+    margin: 10px 10px 0 170px;
+}
+
+.cgp-bread-crumb {
+    display: inline-block;
+    margin-right: 10px;
+    color: $gm-grey-light;
+    .divider {
+        margin-left: 10px;
+    }
+    .icon {
+        margin-right: 5px;
+    }
+    a {
+        color: $gm-grey-light;
+        text-decoration: none;
+        .text:hover {
+            text-decoration: underline;
+        }
+    }
+    .fa-home {
+        color: $gm-blue-light-faded;
+    }
+    .last {
+        color: $gm-blue-primary;
+    }
+}
+
+.cgp-content-container {
+    margin-top: 129px;     // header bar and breadcrumbs
+    margin-bottom: 40px;   // footer
+
+    .cgp-sidenav-container {
+        background-color: white !important;
+        height: calc(100vh - 169px);
+
+        .cgp-sidenav {
+            width: 250px;
+
+            .k-panelbar {
+                height: calc(100vh - 169px) !important;
+            }
+        }
+
+        .cgp-content {
+            padding: 15px;
+        }
+    }
+}
+
+.cgp-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: $color-white;
+    background-color: $gm-blue-primary !important;
+    text-align: center;
+    z-index: 200;
+
+    .footer-text {
+        font-size: 16px;
+        margin-top: 13px;
+        margin-bottom: 0;
+    }
+}
+
+.cgp-flex-fill {
+    flex: 1 1 auto;
+}
+
+.cgp-dialog-actions {
+    padding: 0px 0px 24px 0px !important;
+    margin-top: 20px;
+
+    button {
+        margin-left: 5px;
+    }
+}
+
+snack-bar-container.accept {
+    .mat-simple-snackbar-action {
+        color: $palette-light-green-700;
+    }
+}
+
+snack-bar-container.warning {
+    .mat-simple-snackbar-action {
+        color: $palette-yellow-500;
+    }
+}
+
+snack-bar-container.cancel {
+    .mat-simple-snackbar-action {
+        color: $palette-red-700;
+    }
+}
+
+.no-alert {
+    margin-bottom: 15px;
+}
+
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: $gm-green-dark;
+    background-color: $gm-green-faded;
+    border-color: $gm-green-light-faded;
+}
+
+.alert-info {
+    color: $gm-blue-light-faded;
+    background-color: $gm-blue-faded;
+    border-color: $gm-blue-light-faded;
+}
+
+.alert-warning {
+    color: $gm-amber;
+    background-color: $gm-amber-faded;
+    border-color: $gm-amber-light;
+}
+
+.alert-danger {
+    color: $gm-red-dark;
+    background-color: $gm-red-faded;
+    border-color: $gm-red-light;
+}
+
+.cgp-icon-lg {
+    height: 36px !important;
+    width: 36px !important;
+    font-size: 35px !important;
+    line-height: 36px !important;
+}
