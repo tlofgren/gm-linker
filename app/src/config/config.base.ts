@@ -19,9 +19,9 @@ const cgpSecurityUrl = {
 export const baseConfig = {
     environment: environment.dev,
     appInfo: {
-        name: 'CGP UI',
+        name: 'GM Linker',
         version: '0.0.1',
-        company: 'GENERAL MOTORS'
+        company: 'General Motors'
     },
     baseUrl: '',
     authentication : {
